@@ -8,8 +8,22 @@ def single_number(arr):
     # How to look through an array to check if there is an integer that does NOT show up twice(loop??)
     #If a single itnerger is in the array return that integer into a new array??
     #Else continue looping through the array until it is found
+################
+    #size = len(arr)
+    #create a new array to find x
+    not_dupl = []
+    
+    for x in arr:
+        #check if x should be in not_dupl[]
+        if x in not_dupl:
+            # pop it at it's index
+            not_dupl.pop(not_dupl.index(x))
 
-    pass
+        else:
+            not_dupl.append(x)
+
+    return not_dupl
+
 
 
 if __name__ == '__main__':
