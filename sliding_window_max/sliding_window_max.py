@@ -4,21 +4,33 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
-    #Que numbers into the k sliding window
-    # pop out the largest number and append it to a new array
+  
 
-    #create arrays for window numbers
-    window = []
+# define start and end 
+    start = 0
+    end = k -1
+#make lsit for window numbers
+    result_arr = []        
 
-    nums_arr = [0] * k
 
-    for i in range(0, len(nums) - k + 1):
-        nums_arr = nums[i:i+k]
-                    
-        window.append(max(nums_arr))
+    while end <= len(nums) -1:
+        max = None
 
-    return window
-   
+        for i in range(start, end + 1):
+            #if max is None, make max equal the current nums index
+            if max == None:
+                max = nums[i]
+            #if nums current index is greater than max make max equal the current nums index
+            if nums[i] > max:
+                max = nums[i]
+        #add the value of max to the result lsit
+        result_arr.append(max)
+
+        start += 1
+        end += 1
+
+    #return result
+    return result_arr
 
 
 
