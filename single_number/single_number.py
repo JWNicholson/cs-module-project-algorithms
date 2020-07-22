@@ -4,6 +4,10 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    # Need to check an array for number that only occurs once while the rest show up twice
+    # How to look through an array to check if there is an integer that does NOT show up twice(loop??)
+    #If a single itnerger is in the array return that integer into a new array??
+    #Else continue looping through the array until it is found
 
     pass
 
