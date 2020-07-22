@@ -8,7 +8,21 @@ def product_of_all_other_numbers(arr):
     # return that number to a new array
     # ?? multiply the right side of the array and the left side of the array -combine those two into a final integer ??
 
-    pass
+    right = [0] * len(arr)
+    right[-1] == arr[-1]#end of array
+
+    for i in range(1,len(arr)):
+        right[len(arr)-i-1] = right[len(arr)-i] * arr[len(-i-1)]
+        out = [0] * len(arr)
+        prefix = 1
+        current_index = 0
+        while current_index < len(out)-1:
+            out[current_index] = prefix * rihgt[current_index + 1]
+            prefix *= arr[current_index]
+            current_index  +=1
+            out[-1]= prefix
+        
+        return out
 
 
 if __name__ == '__main__':
