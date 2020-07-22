@@ -2,21 +2,29 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+import math
+
 def product_of_all_other_numbers(arr):
     # Your code here
-    # Loop through the array -  on each index remove it and multiply the rest of the numbers in the array
-    # return that number to a new array
+    # Loop through the array -  on each index multiply the rest of the numbers in the array
+    # sort head middle tail
+    # use math.prod()
   
     # create a new array for products
-    new_arr=[]
-    for i in arr:
-        arr_prod = 1
+    new_arr = []
+    for i in range(len(arr)):
+        # product is at start of list
+        if i == 0:
+            new_arr.append(math.prod(arr[1:]))
 
-        for j in arr:
-            if j != i:
-                arr_prod = arr_prod * j
+        # product is at end of the list
+        elif i == (len(arr)-1):
+            new_arr.append(math.prod(arr[:-1]))
 
-        new_arr.append(arr_prod)
+        # product in middle of list
+        else:
+            new_arr.append(math.prod(arr[:i]+arr[i+1:]))
+
 
     return new_arr
 
