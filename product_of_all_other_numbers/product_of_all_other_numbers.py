@@ -6,23 +6,19 @@ def product_of_all_other_numbers(arr):
     # Your code here
     # Loop through the array -  on each index remove it and multiply the rest of the numbers in the array
     # return that number to a new array
-    # ?? multiply the right side of the array and the left side of the array -combine those two into a final integer ??
+  
+    # create a new array for products
+    new_arr=[]
+    for i in arr:
+        arr_prod = 1
 
-    right = [0] * len(arr)
-    right[-1] == arr[-1]#end of array
+        for j in arr:
+            if j != i:
+                arr_prod = arr_prod * j
 
-    for i in range(1,len(arr)):
-        right[len(arr)-i-1] = right[len(arr)-i] * arr[len(-i-1)]
-        out = [0] * len(arr)
-        prefix = 1
-        current_index = 0
-        while current_index < len(out)-1:
-            out[current_index] = prefix * rihgt[current_index + 1]
-            prefix *= arr[current_index]
-            current_index  +=1
-            out[-1]= prefix
-        
-        return out
+        new_arr.append(arr_prod)
+
+    return new_arr
 
 
 if __name__ == '__main__':
