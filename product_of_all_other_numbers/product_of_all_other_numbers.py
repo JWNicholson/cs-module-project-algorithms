@@ -4,6 +4,9 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    # Loop through the array -  on each index remove it and multiply the rest of the numbers in the array
+    # return that number to a new array
+    # ?? multiply the right side of the array and the left side of the array -combine those two into a final integer ??
 
     pass
 
