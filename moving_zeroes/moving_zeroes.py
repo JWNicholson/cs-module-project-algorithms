@@ -25,8 +25,9 @@ def moving_zeroes(arr):
     # return arr
 
   
-    # if arr == [0] * len(arr):
-    #     return arr
+    """
+        previous solution has more lookups and ifs than the improved version
+    """
 
     newArr = []
     count = 0
